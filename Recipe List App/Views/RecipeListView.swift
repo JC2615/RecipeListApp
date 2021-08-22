@@ -9,11 +9,9 @@ import SwiftUI
 
 struct RecipeListView: View {
     
-    @ObservedObject var model = RecipeViewModel()
+    @EnvironmentObject var model: RecipeViewModel
     
     var body: some View {
-        
-        
         
         NavigationView {
             List(model.recipes){ r in
